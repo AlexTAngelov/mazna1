@@ -1,0 +1,27 @@
+<form class="car-form" method="POST">
+    <label for="brand">Car brand:</label>
+    <input type="text" id="brand" value="{{car.brand}}" name="brand">
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" value="{{car.model}}" name="model">
+
+    <label for="mileage">Mileage:</label>
+    <input type="number" id="model" value="{{car.milage}}" name="mileage">
+
+    <label for="engine">Engine:</label>
+    <input type="text" id="engine" value="{{car.engine}}" name="engine">
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" value="{{car.price}}" name="price">
+
+    <label for="phoneNum">Phone number:</label>
+    <input type="number" id="phoneNum" value="{{car.phoneNum}}" name="phoneNum">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" value="{{car.desciption}}" rows="4"></textarea>
+
+    <label for="image">Image URL:</label>
+    <input type="url" id="image" value="{{car.image}}" name="image">
+
+    <button type="submit">Add Car</button>
+</form>

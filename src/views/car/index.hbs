@@ -1,0 +1,10 @@
+{{#each cars}}
+<div class="car-card" id="car2">
+    <img src="{{image}}">
+    <h3>{{brand}}</h3>
+    <p>Model: {{model}}</p>
+    <a class='detail-btn' href='/car/{{_id}}/details'>Details</a>
+</div>
+{{else}}
+<p class="no-post">There are no cars posted yet!</p>
+{{/each}}

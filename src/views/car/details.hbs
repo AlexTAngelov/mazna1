@@ -1,0 +1,23 @@
+<div class="car-details">
+    <img src="{{car.image}}"
+        alt="{{car.brand}}" class="car-image">
+    <div class="car-info">
+        <h2>Brand: {{car.brand}}</h2>
+        <p><strong>Model:</strong> {{car.model}}</p>
+        <p><strong>Mileage:</strong> {{car.mileage}}</p>
+        <p><strong>Engine:</strong> {{car.engine}}</p>
+        <p><strong>Price:</strong> {{car.price}}</p>
+        <p><strong>Phone number:</strong> {{car.phoneNum}}</p>
+        <p><strong>Description:</strong> {{car.description}}</p>
+    </div>
+    
+    <div class="actions">
+        {{#if isOwner}}
+        <a class="edit-btn" href="/car/{{car._id}}/edit">Edit</a>
+        <a class="delete-btn" href="/car/{{car._id}}/delete">Delete</a>
+        {{!-- {{else}}
+        <a id="like-button" class="like-btn" href="">Like</a>
+        <p id="liked-message" class="liked-message hidden">You've already liked this car.</p> --}}
+        {{/if}}
+    </div>
+</div>

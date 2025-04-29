@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/car">Inventory</a></li>
+                <li><a href="/about">About</a></li>
+                {{#if isAuthenticated}}
+                <li><a href="/car/create">Create</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{#if error}}
+         <div>
+            <div class="errorContainer">
+                <p>{{error}}</p>
+            </div>
+        </div>
+        {{/if}}
+
+        {{{body}}}
+    </main>
+    <footer>
+        <p>© 2025 Car Dealership. All rights reserved.</p>
+    </footer>
+</body>
+</html>
